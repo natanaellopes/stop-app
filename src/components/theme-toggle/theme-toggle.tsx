@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
+import { Moon, Sun } from "lucide-react";
+import * as React from "react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
-import { useThemeToggle } from "./useThemeToggle"
+import { useThemeToggle } from "./useThemeToggle";
 
 export function ModeToggle() {
   const { setDarkTheme, setLightTheme, setSystemTheme } = useThemeToggle();
@@ -26,16 +26,10 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={setLightTheme}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={setDarkTheme}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={setSystemTheme}>
-          System
-        </DropdownMenuItem>
+        <DropdownMenuItem onClick={setLightTheme}>Light</DropdownMenuItem>
+        <DropdownMenuItem onClick={setDarkTheme}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={setSystemTheme}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
