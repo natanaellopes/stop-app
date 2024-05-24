@@ -1,9 +1,21 @@
-import { ModeToggle } from "@/components/theme-toggle/theme-toggle";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <ModeToggle />
-    </main>
+    <Card className="w-[400px] m-auto">
+      <CardHeader>
+        <CardTitle>Stop</CardTitle>
+      </CardHeader>
+      <CardContent className="flex justify-between">
+        <Button asChild>
+          <Link href="/new-game">Começar um novo jogo</Link>
+        </Button>
+        <Button variant="secondary" asChild>
+          <Link href="/join">Entrar em um jogo</Link>
+        </Button>
+      </CardContent>
+    </Card>
   );
 }
